@@ -1,0 +1,37 @@
+body {
+  margin: 0px;
+}
+
+canvas {
+  background-color: rgb(225, 143, 233);
+  margin: 20px;
+}
+
+img {
+  display: none;
+}
+ /* portfolio styles */
+ .content h1 {
+  color: rgb(150, 50, 50);
+}
+
+#portfolio {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#portfolio li {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+  background: #eee;
+}
+
+#portfolio a {
+  text-decoration: none;
+  color: #454545;
+}

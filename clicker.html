@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Chicken Clicker</title>
 </head>
+
 <body>
-<img id="chicken" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAtbicga7qX5goDUiPgagzx5qoaiA7uQBaxMFJTCDNjsTtaVOr:https://instantpotcooking.com/wp-content/uploads/2023/06/Instant-Pot-Fried-Chicken.jpg&s">
-<h1 id="score"> score = 0 </h1>
-<script>
-var score=0
-function up(){
-  score=score+1
-document.getElementById("score").innerHTML = score
-  console.log(score)
-}
-document.getElementById("chicken").addEventListener("click",up)
-</script>
+  <p id="button">Upgrade</p>
+  <img id="chicken"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAtbicga7qX5goDUiPgagzx5qoaiA7uQBaxMFJTCDNjsTtaVOr:https://instantpotcooking.com/wp-content/uploads/2023/06/Instant-Pot-Fried-Chicken.jpg&s">
+  <h1 id="score"> score = 0 </h1>
+  <script>
+    var score = 0
+    function up() {
+      score = score + pointsPerClick
+      document.getElementById("score").innerHTML = score
+      console.log(score)
+    }
+    document.getElementById("chicken").addEventListener("click", up)
+    document.getElementById("button").addEventListener("click",upgrade)
+    var pointsPerClick = 1
+    function upgrade() {
+      alert()
+      pointsPerClick = pointsPerClick + 1
+
+    }
+  </script>
 </body>
+
 </html>
