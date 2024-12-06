@@ -18,15 +18,43 @@
 </head>
 
 <body>
-<script>
-    function moveBox(){
-left = left + 50px
-    }
-</script>
-    
-<div>
 
-</div>
+    <div id="box">
+
+    </div>
 </body>
 
 </html>
+<script>
+    setInterval(box,16)
+    var position = 5
+    var yposition = 5
+    var ydirection = 0
+    var direction = 0
+    function box() {
+        position = position + direction
+        yposition = yposition + ydirection
+        document.getElementById("box").style.left = position + "px"
+        document.getElementById("box").style.top = yposition + "px"
+        //change direction if position > 700
+        if (position > 1250) {
+            direction = -5
+        }
+        if (position < 0) {
+            direction = 5
+        }
+        if (yposition > 600) {
+            ydirection = -5
+        }
+        if (yposition < 0) {
+            ydirection = 5
+        }
+    }
+    function speedUp() {
+        direction = direction + 5
+        ydirection = ydirection + 5
+    }
+    document.getElementById("box").addEventListener("click", speedUp)
+
+
+</script>
