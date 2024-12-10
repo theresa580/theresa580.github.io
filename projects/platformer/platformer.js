@@ -15,24 +15,20 @@ $(function () {
       //start game
       setInterval(main, 1000 / frameRate);
     }
+
     // Create walls - do not delete or modify this code
-    createPlatform(-50, -50, canvas.width + 100, 50); //top
-    createPlatform(-50, canvas.height - 10, canvas.width + 100, 200); //right
-    createPlatform(-50, -50, 50, canvas.height + 500); //bottom
-    createPlatform(canvas.width, -50, 50, canvas.height + 100);
+    createPlatform(-50, -50, canvas.width + 100, 50); // top wall
+    createPlatform(-50, canvas.height - 10, canvas.width + 100, 200, "navy"); // bottom wall
+    createPlatform(-50, -50, 50, canvas.height + 500); // left wall
+    createPlatform(canvas.width, -50, 50, canvas.height + 100); // right wall
 
-    /**
-     * Uncomment the drawGrid() function call below to add a "grid" to your platformer game's screen
-     * The grid will place both horizontal and vertical platforms incremented 100 pixels apart
-     * This can help you determine specific x any y values throughout the game
-     * Comment the function call out to remove the grid
-     */
+    //////////////////////////////////
+    // ONLY CHANGE BELOW THIS POINT //
+    //////////////////////////////////
 
-    // drawGrid();
+    // TODO 1 - Enable the Grid
+    // toggleGrid();
 
-    /////////////////////////////////////////////////
-    //////////ONLY CHANGE BELOW THIS POINT///////////
-    /////////////////////////////////////////////////
 
     // TODO 1
     // Create platforms
@@ -52,10 +48,10 @@ $(function () {
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
-    createCollectable("Bob", 1350, 50);
-    createCollectable("Deborah", 200, 170, 0.5, 0.7);
-    createCollectable("Jeff", 1200, 90);
-    createCollectable("Gertrude", 400, 370, 0.5, 0.7);
+    createCollectable("steve", 750, 50);
+    createCollectable("diamond", 200, 170, 0.5, 0.7);
+    createCollectable("kennedi", 600, 90);
+    createCollectable("max", 550, 370, 0.5, 0.7);
 
     
     // TODO 3
@@ -63,16 +59,16 @@ $(function () {
     // You must decide the wall you want the cannon on, the position on the wall, and the time between shots in milliseconds
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
-    createCannon("top", 200, 100);
+    createCannon("top", 200, 2000);
     createCannon("right", 300, 2000);
-    createCannon("bottom", 200, 100);
-
+    createCannon("bottom", 200, 2000);
 
 
     
-    /////////////////////////////////////////////////
-    //////////ONLY CHANGE ABOVE THIS POINT///////////
-    /////////////////////////////////////////////////
+    
+    //////////////////////////////////
+    // ONLY CHANGE ABOVE THIS POINT //
+    //////////////////////////////////
   }
 
   registerSetup(setup);
