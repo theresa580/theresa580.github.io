@@ -42,8 +42,8 @@ In this project, you’ll create an interactive "motion poem" that combines rand
 
 1. 📂 **Open your Circularity project's `init.js` file** in your codespace to get started.
    - 🔍 Locate the file tree (the list of files and folders) in the left panel of your codespace.
-   - Click the `projects` folder 📂 in your file tree to expand the list of projects.
-   - Click on the `circularity` folder 📂 located within the `projects` folder.
+   - Click the `fsd-projects` folder 📂 in your file tree to expand the list of projects.
+   - Click on the `circularity` folder 📂 located within the `fsd-projects` folder.
    - Click on the `init.js` file located within the `circularity` folder 📂. ***Coding for all steps will be done in this file.***
 
 2. **Follow the instructions carefully** for each TODO:
